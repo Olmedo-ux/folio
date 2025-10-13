@@ -163,7 +163,7 @@ header {
   height: 160px;
   border-radius: 50%;
   border: 4px solid #07c6f6;
-  background: url("..\\Projet\\1000043068.jpg") center center no-repeat;
+  background: url(".\\1000043068.jpg") center center no-repeat;
   background-size: cover;
   flex-shrink: 0;
 }
