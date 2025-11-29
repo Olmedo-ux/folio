@@ -125,7 +125,32 @@
     <p>Designed by <a href="https://www.facebook.com/profile.php?id=61558826116632" class="footer-link">ODA: Olm Design Agency</a> with HTML, CSS, JS</p>
     <p>Tous droits réservés - 2025</p>
   </footer>
+<script>
+    const navSlide = () => {
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+        const navLinks = document.querySelectorAll('.nav-links li');
 
+        burger.addEventListener('click', () => {
+            // Basculer le menu
+            nav.classList.toggle('nav-active');
+
+            // Animer les liens (optionnel)
+            navLinks.forEach((link, index) => {
+                if (link.style.animation) {
+                    link.style.animation = '';
+                } else {
+                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                }
+            });
+            
+            // Animation du bouton burger en croix (optionnel)
+            burger.classList.toggle('toggle');
+        });
+    }
+
+    navSlide();
+</script>
   <script src=".\script.js"></script>
 </body>
 </html>
