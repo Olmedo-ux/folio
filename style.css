@@ -27,39 +27,86 @@ header {
   z-index: 100;
 }
 
+
+/* --- Styles de base pour la barre de navigation --- */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 60px; /* Hauteur réduite pour le mobile */
+    background-color: #333; /* Remplacez par votre couleur de fond */
+    color: white;
+    position: fixed; /* Garde le menu en haut */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Assure que le menu est au-dessus du reste */
 }
 
 .logo {
-  color: white;
-  font-weight: 700;
-  font-size: 1.3rem;
-}
-
-.highlight {
-  color: #07c6f6;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
 }
 
 .nav-links {
-  list-style-type: none;
-  display: flex;
-  gap: 2rem;
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    list-style: none;
 }
 
-.nav-links a {
-  color: #ccc;
-  font-weight: 600;
-  transition: color 0.3s ease;
+.burger {
+    display: none; /* Caché sur ordinateur */
+    cursor: pointer;
 }
 
-.nav-links a.active,
-.nav-links a:hover {
-  color: white;
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white; /* Couleur des barres du burger */
+    margin: 5px;
+    transition: all 0.3s ease;
 }
 
+/* --- Styles SPÉCIFIQUES au Mobile --- */
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 60px; /* Empêche le contenu d'être caché sous le header fixe */
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh; /* Prend le reste de la hauteur */
+        top: 60px; /* Juste en dessous de la barre */
+        background-color: #333; /* Même couleur que la barre */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%; /* Largeur du menu déroulant */
+        transform: translateX(100%); /* Caché hors de l'écran par défaut */
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li {
+        opacity: 0; /* Pour l'animation d'apparition */
+    }
+
+    .burger {
+        display: block; /* Visible uniquement sur mobile */
+    }
+}
+
+/* Classe active ajoutée par JavaScript pour ouvrir le menu */
+.nav-active {
+    transform: translateX(0%);
+}
+
+/* Animation des liens (optionnel pour faire joli) */
+@keyframes navLinkFade {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0px); }
+}
 /* Sections common */
 .section {
   max-width: 1000px;
