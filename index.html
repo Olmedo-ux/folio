@@ -4,153 +4,117 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio Matthias POUNA</title>
-  <link rel="stylesheet" href=".\style.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <header>
     <nav class="navbar">
-    <div class="logo">Matthias POUNA</div>
-    
-    <ul class="nav-links">
+      <div class="logo">Matthias POUNA</div>
+      
+      <ul class="nav-links">
         <li><a href="#accueil">Accueil</a></li>
         <li><a href="#a-propos">À propos</a></li>
         <li><a href="#projets">Projets</a></li>
         <li><a href="#competences">Compétences</a></li>
         <li><a href="#contact">Contact</a></li>
-    </ul>
+      </ul>
 
-    <div class="burger">
+      <div class="burger">
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
-    </div>
+      </div>
     </nav>
   </header>
 
-  <section id="accueil" class="section accueil">
-    <div class="accueil-left">
-      <h1>Je suis <span class="prenom">Matthias POUNA</span>, <br />Développeur en devenir passionné par le web et le design !</h1>
-      <a href="#projets" class="btn-primary">Voir mes projets</a>
-    </div>
-    <div class="accueil-right">
-      <img src=".\illustration.jpg" alt="Illustration développement web" />
-    </div>
-  </section>
-
-  <section id="a-propos" class="section a-propos">
-    <div class="apropos-left">
-      <h2>À propos</h2>
-      <p>Je m'appelle <strong><span class="highlight">Matthias POUNA</span></strong>, passionné par la création de sites web modernes et interactifs.</p>
-      <p>Je suis actuellement étudiant en développement web</a>, et je cherche à améliorer mes compétences en JavaScript, HTML et CSS.</p>
-      <p>J'adore transformer mes idées en projets concrets et expérimenter avec les nouvelles technologies.</p>
-      <a href=".\CV-POUNA-K-Matthias.pdf" class="btn-secondary">Télécharger mon CV</a>
-    </div>
-    <div class="apropos-right">
-      <div class="photo-profil"></div>
+  <section id="accueil" class="section reveal">
+    <div class="accueil-container">
+      <div class="accueil-left">
+        <h1>Je suis <span class="prenom">Matthias POUNA</span>,<br />Développeur passionné par le web & le design !</h1>
+        <a href="#projets" class="btn-primary">Voir mes projets</a>
+      </div>
+      <div class="accueil-right">
+        <img src="./illustration.jpg" alt="Illustration développement web" onerror="this.style.display='none'"/>
+      </div>
     </div>
   </section>
 
-  <section id="projets" class="section projets">
+  <section id="a-propos" class="section reveal">
+    <div class="apropos-container">
+      <div class="apropos-left">
+        <h2>À propos</h2>
+        <p>Je m'appelle <strong><span class="highlight">Matthias POUNA</span></strong>. Actuellement étudiant, je transforme mes idées en expériences interactives.</p>
+        <p>Je cherche constamment à perfectionner mes compétences en <strong>JavaScript, HTML et CSS</strong>.</p>
+        <a href="./CV-POUNA-K-Matthias.pdf" class="btn-secondary" target="_blank">Télécharger mon CV</a>
+      </div>
+      <div class="apropos-right">
+        <div class="photo-profil"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projets" class="section reveal">
     <h2>Mes Projets</h2>
     <div class="projets-list">
       <article class="projet">
-        <p>Un mini-jeu interactif en JavaScript qui utilise des événements DOM.</p>
-        <p class="tags"><strong>#html, #css, #js</strong></p>
-        <a href=".\Mini jeu\Index.html" class="btn-primary small-btn">Voir</a>
+        <h3>Mini Jeu JS</h3>
+        <p>Un jeu interactif utilisant la manipulation avancée du DOM.</p>
+        <p class="tags">#html #css #js</p>
+        <a href="#" class="btn-primary small-btn">Voir le projet</a>
       </article>
       <article class="projet">
-        <p>Un mini-jeu interactif en JavaScript qui utilise des événements DOM.</p>
-        <p class="tags"><strong>#html, #css, #js</strong></p>
-        <a href=".\Mini jeu\Index.html" class="btn-primary small-btn">Voir</a>
+        <h3>Site Vitrine</h3>
+        <p>Création d'une landing page responsive et moderne.</p>
+        <p class="tags">#design #ui #ux</p>
+        <a href="#" class="btn-primary small-btn">Voir le projet</a>
       </article>
       <article class="projet">
-        <p>Un mini-jeu interactif en JavaScript qui utilise des événements DOM.</p>
-        <p class="tags"><strong>#html, #css, #js</strong></p>
-        <a href=".\Mini jeu\Index.html" class="btn-primary small-btn">Voir</a>
+        <h3>Application Météo</h3>
+        <p>Utilisation d'API externe pour afficher la météo en temps réel.</p>
+        <p class="tags">#api #fetch #json</p>
+        <a href="#" class="btn-primary small-btn">Voir le projet</a>
       </article>
     </div>
   </section>
 
-  <section id="competences" class="section competences">
+  <section id="competences" class="section reveal">
     <h2>Mes Compétences</h2>
     <div class="skills-container">
       <div class="skills soft-skills">
         <h3>Soft Skills</h3>
-        <div class="skill-item">
-          <span>Gestion de projet</span>
-          <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
-        </div>
-        <div class="skill-item">
-          <span>Résolution de problème</span>
-          <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
-        </div>
-        <div class="skill-item">
-          <span>Adaptabilité</span>
-          <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
-        </div>
+        <div class="skill-item"><span>Gestion de projet</span><div class="progress-bar"><div class="progress" style="width: 80%;"></div></div></div>
+        <div class="skill-item"><span>Résolution de problème</span><div class="progress-bar"><div class="progress" style="width: 75%;"></div></div></div>
+        <div class="skill-item"><span>Adaptabilité</span><div class="progress-bar"><div class="progress" style="width: 90%;"></div></div></div>
       </div>
       <div class="skills hard-skills">
         <h3>Hard Skills</h3>
-        <div class="skill-item">
-          <span>HTML</span>
-          <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
-        </div>
-        <div class="skill-item">
-          <span>CSS</span>
-          <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
-        </div>
-        <div class="skill-item">
-          <span>JavaScript</span>
-          <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
-        </div>
+        <div class="skill-item"><span>HTML5 / CSS3</span><div class="progress-bar"><div class="progress" style="width: 90%;"></div></div></div>
+        <div class="skill-item"><span>JavaScript (ES6+)</span><div class="progress-bar"><div class="progress" style="width: 70%;"></div></div></div>
+        <div class="skill-item"><span>React / Vue (Basics)</span><div class="progress-bar"><div class="progress" style="width: 40%;"></div></div></div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="section contact">
-    <h2>Vous avez un <span class="highlight">projet en tête ?</span></h2>
+  <section id="contact" class="section contact reveal">
+    <h2>Un projet en tête ?</h2>
     <p>N'hésitez pas à me <span class="highlight">contacter</span></p>
-    <form id="contact-form" autocomplete="off">
+    <form id="contact-form">
       <div class="form-group">
-        <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required />
-        <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
+        <input type="text" name="prenom" placeholder="Prénom" required />
+        <input type="text" name="nom" placeholder="Nom" required />
       </div>
-      <input type="text" id="sujet" name="sujet" placeholder="Votre sujet" required />
-      <textarea id="message" name="message" rows="4" placeholder="Écrivez votre message" required></textarea>
-      <button type="submit" class="btn-primary envoyer">Envoyer</button>
+      <input type="text" name="sujet" placeholder="Sujet" required />
+      <textarea name="message" rows="4" placeholder="Votre message..." required></textarea>
+      <button type="submit" class="btn-primary envoyer">Envoyer le message</button>
     </form>
   </section>
 
   <footer>
-    <p>Designed by <a href="https://www.facebook.com/profile.php?id=61558826116632" class="footer-link">ODA: Olm Design Agency</a> with HTML, CSS, JS</p>
-    <p>Tous droits réservés - 2025</p>
+    <p>Designed by Matthias Pouna | 2025</p>
   </footer>
-<script>
-    const navSlide = () => {
-        const burger = document.querySelector('.burger');
-        const nav = document.querySelector('.nav-links');
-        const navLinks = document.querySelectorAll('.nav-links li');
 
-        burger.addEventListener('click', () => {
-            // Basculer le menu
-            nav.classList.toggle('nav-active');
-
-            // Animer les liens (optionnel)
-            navLinks.forEach((link, index) => {
-                if (link.style.animation) {
-                    link.style.animation = '';
-                } else {
-                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-                }
-            });
-            
-            // Animation du bouton burger en croix (optionnel)
-            burger.classList.toggle('toggle');
-        });
-    }
-
-    navSlide();
-</script>
-  <script src=".\script.js"></script>
+  <script src="script.js"></script>
 </body>
-</html>
+    </html>
